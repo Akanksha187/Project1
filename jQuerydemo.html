@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Addition Program Using jQuery</title>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script>
+			function showanswer() {
+				var t1,t2,ans;
+				var t1 = $("#txt1").val();
+				var t2 = $("#txt2").val();
+				var ans = parseInt(t1) + parseInt(t2);
+				$("#txt3").val(ans);
+			}
+			function cleartxt() {
+				$("#txt1").val("");
+				$("#txt2").val("");
+				$("#txt3").val("");
+			}
+		</script>
+	</head>
+	<body>
+	Enter First value : 
+	<input type="text" id="txt1"><br>
+	<br> Enter Second value : 
+	<input type="text" id="txt2"><br>
+	<br> Answer : 
+	<input type="text" id="txt3"><br> <br>
+	<input type="button" value="Answer" onclick="showanswer();"><br><br>
+	<input type="button" value="Clear" onclick="cleartxt();">
+	</body>
+</html>

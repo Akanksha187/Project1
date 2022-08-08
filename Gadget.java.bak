@@ -1,0 +1,62 @@
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.event.*;
+
+public class Gadget extends JFrame implements ListSelectionListener
+{
+	JLabel jl1;
+	JList list;
+	JTextField jtf;
+	String name[]={"Mobile","Camera","Speaker","Printer","Headphones"};
+	
+	public Gadget()
+	{
+		Container cp=getContentPane();
+		cp.setLayout(new BorderLayout());
+		jl1=new JLabel("Select your product");
+		cp.add(jl1,BorderLayout.NORTH);
+		list=new JList(name);
+		list.addListSelectionListener(this);
+		cp.add(list,BorderLayout.CENTER);
+		jtf=new JTextField(15);
+		cp.add(jtf,BorderLayout.SOUTH);
+	}
+	
+	public void valueChanged(ListSelectionEvent le)
+	{
+		int i=list.getSelectedIndex();
+			if(i==0)
+			{
+				jtf.setText("The price of Mobile is Rs.10000");
+			}
+			else if(i==1)
+			{
+				jtf.setText("The price of Camera is Rs.8000");
+			}
+			else if(i==2)
+			{
+				jtf.setText("The price of Speaker is Rs.1000");
+			}
+			else if(i==3)
+			{
+				jtf.setText("The price of Printer is Rs.5000");
+			}
+			else if(i==4)
+			{
+				jtf.setText("The price of Headphones is Rs.500");
+			}
+			else
+			{
+				jtf.setText("Select an Electonic Gadget");
+			}
+	}
+		public static void main(String args[])
+		{
+			Gadget g1=new Gadget();
+			g1.setSize(500,500);
+			g1.setVisible(true);
+			g1.setTitle("Name:Akanksha, Rno:MC2142");
+			g1.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		}
+}

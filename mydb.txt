@@ -1,0 +1,12 @@
+create database mydb;
+use mydb;
+CREATE TABLE emp(id int, fname VARCHAR(100), lname VARCHAR(100));
+INSERT into emp values(1,'tom', 'jerry');
+
+INSERT into emp values(2,'santa', 'clause');
+
+INSERT into emp values(3,'batman', 'robin');
+
+INSERT into emp values(4,'mickey', 'mouse');
+
+INSERT into emp values(5,'pen', 'pencil');
